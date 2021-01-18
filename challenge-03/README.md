@@ -182,13 +182,23 @@ método), que será concatenada com a frase de retorno, mostrando a resposta
 correta, de acordo com os dados inseridos no objeto.
 */
 pessoa.apresentacao = function () {
+  var sexo = 'o';
+  var idadeAnos = 'anos';
+  var metros = "metros";
+
   if (pessoa.sexo === "Feminino") {
-   return "Olá, eu sou a " + pessoa.nomeCompleto() + " tenho " + pessoa.idade + " anos, " + pessoa.altura + " metros de altura, meu peso é " + pessoa.peso + "kg e, só hoje, eu já caminhei " + pessoa.caminhouQuantosMetros + " metros!"
-  } else if (pessoa.idade === 1) {
-    return "Olá, eu sou o " + pessoa.nomeCompleto() + " tenho " + pessoa.idade + " ano, " + pessoa.altura + " metros de altura, meu peso é " + pessoa.peso + "kg e, só hoje, eu já caminhei " + pessoa.caminhouQuantosMetros + " metros!"
-  } else {
-    return "Olá, eu sou o " + pessoa.nomeCompleto() + " tenho " + pessoa.idade + " anos, " + pessoa.altura + " metros de altura, meu peso é " + pessoa.peso + "kg e, só hoje, eu já caminhei " + pessoa.caminhouQuantosMetros + " metros!"
+    sexo = 'a'
   }
+
+  if (pessoa.idade === 1) {
+    idadeAnos = 'ano';
+  }
+
+  if (pessoa.caminhouQuantosMetros === 1) {
+    metros = "metro";
+  }
+
+  return "Olá, eu sou " + sexo + " " + pessoa.nomeCompleto() + " tenho " + pessoa.idade + idadeAnos + ", " + pessoa.altura + " metros de altura, meu peso é " + pessoa.peso + "kg e, só hoje, eu já caminhei " + pessoa.caminhouQuantosMetros + metros + ".";
 }
 
 // Agora, apresente-se ;)
