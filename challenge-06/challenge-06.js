@@ -4,7 +4,8 @@ para começar o desafio.
 Declare uma variável chamada `championship` que receberá o nome do campeonato,
 e imprima o nome desse campeonato no console.
 */
-var championship = "Brasileiro";
+var championship = "Campeonato Brasileiro";
+console.log(championship);
 
 /*
 Declare uma variável chamada `teams`, que receberá um array com 5 elementos.
@@ -33,13 +34,12 @@ Crie uma função chamada `showTeamPosition` com as seguintes características:
     "Não temos a informação do time que está nessa posição."
 */
 function showTeamPosition(position) {
-  if (position > 5) {
+  if (position < 1 || position > 5) {
     return "Não temos a informação do time que está nessa posição.";
-  } else {
-    return (
-      "O time que está em " + position + "º lugar é o " + teams[position - 1]
-    );
   }
+  return (
+    "O time que está em " + position + "º lugar é o " + teams[position - 1]
+  );
 }
 
 /*
