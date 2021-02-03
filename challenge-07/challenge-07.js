@@ -24,20 +24,20 @@ Mostre no console o segundo elemento desse último array, criado acima, com a
 frase:
 "O segundo elemento do segundo array é [ELEMENTO]."
 */
-console.log("O segundo elemento do segundo array é: ", addItem()[5][1]);
+console.log("O segundo elemento do segundo array é: ", arr[5][1]);
 
 /*
 Mostre no console quantos itens tem o primeiro array criado, com a frase:
 "O primeiro array tem [QUANTIDADE DE ITENS] itens."
 */
 
-console.log("O primeiro array tem " + addItem().length + " itens.");
+console.log("O primeiro array tem " + arr.length + " itens.");
 
 /*
 Agora mostre no console quantos itens tem o segundo array criado, com a frase:
 "O segundo array tem [QUANTIDADE DE ITENS] itens."
 */
-console.log("O segundo array tem " + addItem()[5].length + " itens.");
+console.log("O segundo array tem " + arr[5].length + " itens.");
 
 /*
 Utilizando a estrutura de repetição `while`, mostre no console todos os números
