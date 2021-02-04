@@ -76,7 +76,7 @@ function calculator(operator) {
         result = x % y;
         break;
       default:
-        "Operação inválida";
+        return "Operação inválida";
     }
 
     return (
