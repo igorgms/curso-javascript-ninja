@@ -14,7 +14,9 @@ o resultado no console, com a frase:
 */
 var val1 = 5;
 var val2 = 10;
-console.log("A soma de " + val1 + " e " + val2 + " é igual a " + sum(5, 10));
+console.log(
+  "A soma de " + val1 + " e " + val2 + " é igual a " + sum(val1, val2)
+);
 
 /*
 Mostre no console o nome da função criada acima, com a frase:
