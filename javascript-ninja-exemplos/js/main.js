@@ -1,22 +1,25 @@
-(function() {
-  function myFunction() {
-    return this;
-  }
-  console.log(myFunction())
+(function(win, doc) {
+  'use strict'
 
-  var myObject = {
-    myProperty: 1,
-    init: function init() {
-      return this;
-    }
-  }
-  console.log(myObject.init())
+  var $inputUsername = doc.querySelector('#username');
+  var $inputPassword = doc.querySelector('#password');
+  var $button = doc.querySelector('#button');
 
-  function MyConstructor() {
-    this.prop1 = 'prop1';
-    this.prop2 = 'prop2';
-  }
-  var constructor = new MyConstructor();
-  console.log('MyConstructor', constructor.prop1)
-  console.log(prop1)
-})()
+  $button.addEventListener('click', function(event) {
+    event.preventDefault();
+    console.log('Cliquei')
+  }, false);
+
+  $inputUsername.addEventListener('click', function() {
+    alert('Clicou no input!')
+  }, false);
+
+  // setter - seta os valores nos respectivos campos
+
+  // $inputUsername.value = 'Igor Gomes Firmino';
+  // $inputPassword.value = 'minhasenha';
+
+  // getter - obtém os valores que estão contidos nos campos
+
+  // console.log($inputUsername.value, $inputPassword.value)
+})(window, document);
